@@ -9,6 +9,7 @@ import ClientsSay from '@/components/ClientsSay';
 import OurTeam from '@/components/OurTeam';
 import CloudFlying from '@/components/CloudFlying';
 import SeasonSlider from '@/components/SeasonSlider';
+import OurGallery from '@/components/OurGallery';
 
 export default function Home() {
   return (
@@ -35,6 +36,7 @@ export default function Home() {
       >
         <Container>
           <ExploreTrips />
+          <OurGallery />
           <AnimatedBackground />
           <InfiniteTextSlider />
         </Container>
