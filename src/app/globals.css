@@ -1,0 +1,90 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-greyscale-0: #ffffff;
+  --color-greyscale-5: #d4d4d4;
+  --color-greyscale-10: #a3a3a3;
+  --color-greyscale-60: #666666;
+  --color-greyscale-80: #333333;
+  --color-green-light: #86efac;
+  --bg-orange-hover: #DA4B19;
+  --bg-orange-normal: #E64827;
+  --border-orange-hover: #DA4B19;
+  --bg-gradient-banner: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), transparent, rgba(0, 0, 0, 0.1));
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --tw-text-opacity: 1;
+  --color-text-greyscale-0: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+@keyframes cloudMove {
+  0% { transform: translateX(0); }
+  50% { transform: translateX(-20px); }
+  100% { transform: translateX(0); }
+}
+@keyframes cloudMove2 {
+  0% { transform: translateX(0); }
+  50% { transform: translateX(25px); }
+  100% { transform: translateX(0); }
+}
+
+.animate-cloud {
+  animation: cloudMove 12s ease-in-out infinite;
+}
+
+.animate-cloud2 {
+  animation: cloudMove2 15s ease-in-out infinite;
+}
+
+.transition-400 {
+  transition: all 400ms ease-in-out;
+}
+
+@keyframes cloudMove1 {
+  0% { transform: translateX(0); }
+  50% { transform: translateX(5%); }
+  100% { transform: translateX(0); }
+}
+@keyframes cloudMove2 {
+  0% { transform: translateX(0); }
+  50% { transform: translateX(-5%); }
+  100% { transform: translateX(0); }
+}
+
+.animate-cloud-1 {
+  animation: cloudMove1 20s ease-in-out infinite;
+}
+.animate-cloud-2 {
+  animation: cloudMove2 25s ease-in-out infinite;
+}
+.animate-cloud-4 {
+  animation: cloudMove2 30s ease-in-out infinite;
+}
+
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+.text-greyscale-0 {
+  
+}
+.kKao4-container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 87.5rem;
+}
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
