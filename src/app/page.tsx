@@ -1,14 +1,17 @@
+'use client';
+
 import Link from 'next/link';
 import Container from '@/components/ui/Container';
 import Button from '@/components/ui/Button';
 import { siteConfig } from '@/config/site';
 import AnimatedBackground from '@/components/AnimatedBackground';
 import InfiniteTextSlider from '@/components/InfiniteTextSlider';
-import ExploreTrips from '@/components/ExploreTrips';
 import ClientsSay from '@/components/ClientsSay';
 import OurTeam from '@/components/OurTeam';
 import CloudFlying from '@/components/CloudFlying';
 import SeasonSlider from '@/components/SeasonSlider';
+import ExploreSection from '@/components/ExploreSection';
+import TourList from '@/components/TourList';
 import OurGallery from '@/components/OurGallery';
 
 export default function Home() {
@@ -16,34 +19,20 @@ export default function Home() {
     <>
 
       {/* Hero Section */}
-      <section
-        style={{
-          order: 0,
-          zIndex: 'auto',
-          float: 'none',
-          flexShrink: 1,
-          display: 'block',
-          margin: 0,
-          inset: 0,
-          position: 'relative',
-          flexBasis: 'auto',
-          overflow: 'visible',
-          boxSizing: 'border-box',
-          width: '1912px',
-          height: '2099px',
-          padding: '0px 0px 1647px'
-        }}
-      >
-        <Container>
-          <ExploreTrips />
-          <OurGallery />
-          <AnimatedBackground />
-          <InfiniteTextSlider />
-        </Container>
+      <section className='relative w-full bg-white lg:h-screen'>
+
+        <div className='lg:container subContainer xmd:!px-0 pt-[5.63rem] xmd:pt-[3rem] flex justify-between xmd:flex-col tablet:flex-col xmd:mb-[1.5rem] lg:space-x-[0.75rem]'>
+
+          <ExploreSection />
+          <TourList />
+
+        </div>
+
+        <OurGallery />
         <ClientsSay />
         <OurTeam />
-        <CloudFlying />
         <SeasonSlider />
+
       </section>
     </>
   );
